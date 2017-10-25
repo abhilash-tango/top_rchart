@@ -1,0 +1,6 @@
+library(ggplot2)
+x <-  c(179718,41370,41914,44280)
+labels <-  c("Army","Navy","Air Force","Marine")
+piepercent<- round(100*x/sum(x), 2)
+pie(x, labels = piepercent, main = "Traumatic Brain Injury 2000-2014(Q2)",col = rainbow(length(x)))
+legend("topright", c("Army","Navy","Air Force","Marine"), cex = 0.8,fill = rainbow(length(x)))
